@@ -19,7 +19,7 @@ Configurações necessárias:
   - String url = "jdbc:postgresql://localhost:5432/postgres2"
       - String user = "postgres"
       - String password = "postgres"
-      - Tenha certeza que o banco de dados utilizado seja o do <a href="*"></a>.
+      - Tenha certeza que o banco de dados utilizado seja o do <a href="https://github.com/hideki-abe/zghero-spring-framework/blob/master/linkedtinder.sql"></a>.
 
 O endpoint do Tomcat precisa ser: http://localhost:8080/zghero, para que a requisição no Frontend seja aplicável. Para executar o projeto, realize o seguinte comando no terminal da pasta "Frontend": no-cors-proxy -p 3000 -t http://localhost:8080. A seguir, dê o seguinte comando para iniciar o Frontend: npm start. Se necessário, finalize o processo do live-server com os comandos:
 
