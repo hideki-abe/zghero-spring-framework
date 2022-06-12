@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./cadastroCandidato.css" media="screen"/>
+    <title>Cadastro de Candidato</title>
+</head>
+<body>
+    <div class="titulo">CADASTRO DE CANDIDATO</div>
+    <div class="painel_cadastro">
+        <form class="form_cadastro" method="post">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome"><br>
+            <label for="sobrenome">Sobrenome:</label><br>
+            <input type="text" id="sobrenome" name="sobrenome"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" minlength="10" maxlength="25" id="email" name="email"><br>
+            <label for="cpf">Cpf:</label><br>
+            <input type="text" minlength="11" maxlength="11" id="cpf" name="cpf"><br>
+            <label for="dataNasc">Data de Nascimento:</label><br>
+            <input type="text" id="dataNasc" name="dataNasc"><br>
+            <label for="pais">País:</label><br>
+            <input type="text" id="pais" name="pais"><br>
+            <label for="cep">Cep:</label><br>
+            <input type="text" id="cep" name="cep"><br>
+            <label for="descricao">Descrição:</label><br>
+            <input type="text" id="descricao" name="descricao"><br>   
+            <label for="senha">Senha:</label><br>
+            <input type="text" id="senha" name="senha"><br>  
+   
+        </form>
+        <button type="submit" value="Cadastrar" class="botao_cadastrar">Cadastrar</button> 
+    </div>
+    <script type="module" src="./cadastroCandidato.js"></script>
+</body>
+</html>

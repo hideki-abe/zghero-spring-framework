@@ -2,9 +2,12 @@ package com.zghero.rest.controller;
 
 import com.zghero.model.entity.Empresa;
 import com.zghero.model.repository.Empresas;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/zghero/empresas")
@@ -17,8 +20,21 @@ public class EmpresaController {
     }
 
     @PostMapping
-    public Empresa create(Empresa empresa){
+    @ResponseStatus(HttpStatus.CREATED)
+    public Empresa create(@RequestBody Empresa empresa){
         return repository.save(empresa);
+    }
+
+    @GetMapping
+    public List<Empresa > find(Empresa filtro){
+        ExampleMatcher matcher = ExampleMatcher
+                .matching()
+                .withIgnoreCase()
+                .withStringMatcher(
+                        ExampleMatcher.StringMatcher.CONTAINING );
+
+        Example example = Example.of(filtro, matcher);
+        return repository.findAll(example);
     }
 
 
