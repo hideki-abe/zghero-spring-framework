@@ -1,7 +1,7 @@
 # zghero-spring-framework
 API RESTful do programa Acelera ZG da ZG Soluções com o intuito do aprendizado em Spring Framework.
 
-##(K3-T2): Spring Framework
+## (K3-T2): Spring Framework
 
 A etapa consistia em fazer uma API RESTful com o Spring. Mas as configurações da parte View continuou com os problemas da etapa anterior, sem a utilização
 de nenhum framework. Também foi retirada a parte de validação com REGEX para a facilidade de testagem e por conta do tempo curto pelo meu atraso nas entregas.
